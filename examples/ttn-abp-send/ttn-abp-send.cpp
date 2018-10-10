@@ -10,6 +10,7 @@
   Date: 27/06/2018
   Modified: 09/10/2018 by Luiz Odilon de Lima Brites
   Added functionality in reading DevAddr, Nwskey and Appskey from file
+  These datatypes were modified for store dinamically the data
 ***************************************************************************
   Copyright(c) by: Fox IoT.
 **************************************************************************/
@@ -59,13 +60,13 @@ int DevAddr_a[4], Nwkskey_a[16], Appskey_a[16];
   END DECLARATION Added and code continues
 /***********************************************************************/
 // LoRaWAN end-device address (DevAddr)
-u1_t DevAddr[4]; //={0x26, 0x01, 0x17, 0x2E};
+u1_t DevAddr[4]; //={0x26, 0x01, 0x17, 0x2E}; it was static const u1_t datatype
 
 // LoRaWAN NwkSKey, network session key
-u1_t Nwkskey[16]; //{0x81, 0x58, 0xC3, 0x00, 0xAB, 0x35, 0x5E, 0xD7, 0xF4, 0x1D, 0xC9, 0x0F, 0xDD, 0x4C, 0xB1, 0xB9};
+u1_t Nwkskey[16]; //{0x81, 0x58, 0xC3, 0x00, 0xAB, 0x35, 0x5E, 0xD7, 0xF4, 0x1D, 0xC9, 0x0F, 0xDD, 0x4C, 0xB1, 0xB9}; it was static const u1_t datatype
 
 // LoRaWAN AppSKey, application session key
-u1_t Appskey[16]; //{0xB7, 0xA2, 0x76, 0xBE, 0xAB, 0x79, 0xDF, 0x9C, 0xA0, 0x7B, 0xB6, 0xB4, 0x4A, 0xF5, 0x67, 0xE8};
+u1_t Appskey[16]; //{0xB7, 0xA2, 0x76, 0xBE, 0xAB, 0x79, 0xDF, 0x9C, 0xA0, 0x7B, 0xB6, 0xB4, 0x4A, 0xF5, 0x67, 0xE8}; it was static const u1_t datatype
 
 // Schedule TX every this many seconds (might become longer due to duty cycle limitations).
 int TX_INTERVAL = 30;
